@@ -1,0 +1,100 @@
+<!-- Additional page CSS -->
+<link href="vendor/lightbox/css/lightbox.css" rel="stylesheet" />
+<script src="vendor/lightbox/js/lightbox.min.js"></script>
+
+<section class="gt-isotope">
+	<div class="container">
+		<div class="gt-title">
+			<h3>Samba Metal Works Gallery</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quasi nam ad.</p>
+		</div>
+
+		<ul class="gt-isotope-menu">
+			<li data-filter="tonne"><span class="gt-text">2 Tonne Forklift Jib</span></li>
+			<li data-filter="stillage"><span class="gt-text">Stillage</span></li>
+			<li data-filter="gate"><span class="gt-text">Specialty Gate</span></li>
+			<li data-filter="light"><span class="gt-text">Light Cattle Gate</span></li>
+		</ul>
+
+		
+		<div class="gt-isotipe">
+
+			<div id="iso-container" class="row js-isotope">
+				<div class="col-md-3 gt-isotope-item stillage gate">
+					<a href="assets/img/gallery/1.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/1.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 gt-isotope-item tonne light gate">
+					<a href="assets/img/gallery/2.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/2.jpg" alt="">
+					</a>
+				</div>	
+				<div class="col-md-3 gt-isotope-item stillage tonne">
+					<a href="assets/img/gallery/3.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/3.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 gt-isotope-item stillage gate">
+					<a href="assets/img/gallery/4.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/4.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 gt-isotope-item light tonne">
+					<a href="assets/img/gallery/5.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/5.jpg" alt="">
+					</a>
+				</div>	
+				<div class="col-md-3 gt-isotope-item light">
+					<a href="assets/img/gallery/6.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/6.jpg" alt="">
+					</a>
+				</div>	
+				<div class="col-md-3 gt-isotope-item stillage gate tonne">
+					<a href="assets/img/gallery/7.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/7.jpg" alt="">
+					</a>
+				</div>	
+				<div class="col-md-3 gt-isotope-item light">
+					<a href="assets/img/gallery/8.jpg" data-lightbox="gallery">
+						<img src="assets/img/gallery/8.jpg" alt="">
+					</a>
+				</div>	
+			</div>
+
+
+		</div>
+
+
+	</div>
+</section>
+
+
+<script type="text/javascript" src="assets/js/home-min.js"></script>
+<!-- isotope -->
+<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script>
+	$(window).resize(function(){
+		$('#iso-container').isotope({
+			itemSelector: '.col-md-3'
+		});
+	});
+	
+
+	$(document).ready(function(){
+		$('.gt-isotope-menu li').click(function(){
+			$('.gt-isotope-menu li').removeClass('active');
+			$('.gt-isotope-menu li').removeClass('active');
+			$(this).addClass('active');
+			var filterValue = $(this).attr('data-filter');
+			$('#iso-container').isotope({
+				filter: '.'+filterValue,
+				resizesContainer: true,
+				resizable: true
+			});
+		});
+	});
+	
+
+</script>

@@ -1,0 +1,38 @@
+.gt-work{
+	background:url('@{baseurl}/parallax2.jpg') no-repeat;
+	background-size: cover;
+	padding: 50px 0 100px;
+	color: #ffffff;
+	.gt-unit{
+		@height: 200px;
+		height: @height;
+		width: @height;
+		margin: 0 auto 40px;
+		overflow: hidden;
+		border: 4px solid fade(@base-color, 50%);
+		.border-radius(@height);
+		position: relative;
+		.gt-desc{
+			display: none;
+			color: @base-contrast;
+			height: 100%;
+			width: 100%;
+			padding: 70px 10%;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			font-size: 1.2em;
+			font-family: @head-font;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 1.4em;
+			background: rgba(0,0,0,0.7);
+		}
+		&:hover{
+			.gt-desc{
+				display: block;
+				cursor: pointer;
+			}
+		}
+	}
+}

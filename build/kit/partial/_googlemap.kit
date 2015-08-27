@@ -1,0 +1,47 @@
+<div class="container gt-map-head">
+	<h3>Always feel welcome to Contact us to discuss how we can help you with your next metal fabrication task.</h3>
+	<hr>
+	<p>sales@sambamw.com.au</p>
+</div>
+
+<div id="map-canvas" style="height: 400px;"></div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+</script>
+<script type="text/javascript">
+	function initialize() {
+		var mapOptions = {
+			scrollwheel: false,
+			zoom: 16,
+			center: new google.maps.LatLng(27.673, 85.32)
+		}
+
+
+		var map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+		var image = 'assets/img/mapmarker.png';
+		var myLatLng = new google.maps.LatLng(27.673, 85.32);
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			icon: image
+		});
+
+		var contentString = '<div>'+
+		'<h1>Eat &amp; Feel</h1>'+
+		'<p><b>Eat &amp; Feel</b>, ' +
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus laborum sint assumenda deleniti id aut, eligendi consectetur vero aspernatur! Explicabo.'+
+		'</p>'+
+		'</div>';
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map,marker);
+		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>

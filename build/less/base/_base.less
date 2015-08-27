@@ -1,0 +1,53 @@
+/*****************Base********************/
+@width-sm: @grid-float-breakpoint; //768px
+@width-md: @screen-md; //992px;
+
+@section-pd: 100px; // padding for section mainly used in homepage
+@nav-height: 100px;
+@info-height: 25px; //before navbar info
+
+&{
+  background: @body-bg;
+  color: @font-color;
+}
+
+a{
+  color: @base-color;
+  cursor: pointer;
+  outline: none;
+}
+a:hover, 
+a:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+blockquote{
+  border-left: 5px solid @base-color;
+  margin: 10px 0;
+  padding: 2px 20px;
+}
+hr.dark{
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+.gt-center, .pull-center{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-inner{
+  .border-radius(2px);
+}
+
+.gt-icon{
+	font-size: 25px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+/*bootsrap overrite*/
+.modal-dialog {
+    margin: 95px auto;
+  }
+

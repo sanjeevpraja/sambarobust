@@ -1,0 +1,32 @@
+/*****************Section Defination********************/
+section{
+	@s-padding: 115px;
+	padding: @s-padding 0;
+	.gt-title{
+		text-align: center;
+		width: 80%;
+		margin: 0 auto 0px;
+		color: @base-color;
+		margin-bottom: 50px;
+		h3{	
+			font-size: 1.8em;
+			font-weight: bold;
+		}
+		p{
+			line-height: 1.3em;
+			margin-bottom: 30px;
+		}
+	}
+	&.parallax{
+		.gt-title{
+			h3, p{
+				color: @base-contrast;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+
+

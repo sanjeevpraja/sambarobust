@@ -1,0 +1,88 @@
+.gt-isotope{
+	background:url('@{baseurl}/steel.png') no-repeat;
+	background-size: 100% auto;
+	background-position: top center;
+	padding: 100px 0 0px;
+		ul.gt-isotope-menu{
+		display: table;
+		list-style: none;
+		margin: -15px auto 30px;
+		padding: 0px;
+		font-size: 1.2em;
+		color: @base-color;
+		li{
+			display: inline-block;
+			padding: 0 30px 10px 0;
+			cursor: pointer;
+			position: relative;
+			&:after{
+				content: '';
+				@height: 6px;
+				height: @height;
+				width: @height;
+				.border-radius(@height);
+				background: @base-color;
+				position: absolute;
+				top: 12px;
+				right: 8px;
+			}
+			&:last-child{
+				padding-right: 0px;
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.gt-isotope-item{
+		height: 200px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 30px;
+		&.col-md-3{
+			a{
+				width: 100%;
+			}
+			img{
+				width: 100%;
+			}
+		}
+		.gt-isotope-overlay{
+			visibility: hidden;
+			width: 100%;
+			height: 100%;
+			padding: 15px;
+			font-size: .8em;
+			text-align: center;
+			color: @base-contrast;
+			background: fade(@base-color, 80%);
+			position: absolute;
+			top: 100%;
+			left: 0px;
+			cursor: pointer;
+			.transition(all .4s linear);
+			.gt-iso-title{
+				margin-top: 50px;
+				font-weight: bold;
+			}
+			.gt-subtitle{
+				margin-bottom: 10px;
+				span{
+					font-size: 30px;
+				}
+			}
+		}
+
+		&:hover{
+			.gt-isotope-overlay{
+				visibility: visible;
+				top: 0;
+				.transition(all .4s linear);
+			}
+		}
+	}
+}

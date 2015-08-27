@@ -1,0 +1,37 @@
+<!-- @import "partial/_header.kit" -->
+<!-- Additional page CSS -->
+
+<link rel="stylesheet" href="vendor/responsiveslides/responsiveslides.css">
+<script src="vendor/responsiveslides/responsiveslides.min.js"></script>
+<style>
+
+</style>	
+
+<!-- @import "partial/_nav.kit" -->
+
+<section class="gt-slider gt-height-ad">
+	<ul class="rslides gt-height-ad" id="slider1">
+		<li><div class="gt-height-ad" style="background-image: url('assets/img/parallax1.jpg');"></div></li>
+		<li><div class="gt-height-ad" style="background-image: url('assets/img/parallax2.jpg');"></div></li>
+		<li><div class="gt-height-ad" style="background-image: url('assets/img/parallax3.jpg');"></div></li>
+	</ul>
+</section>
+<!-- @import "partial/_feature.kit" -->
+<!-- @import "partial/_work.kit" -->
+<!-- @import "partial/_isotope.kit" -->
+<!-- @import "partial/_googlemap.kit" -->
+<!-- @import "partial/_footer.kit" -->
+
+<script type="text/javascript" src="assets/js/home-min.js"></script>
+<script>
+	$(function(){
+		$("#slider1").responsiveSlides({
+			pager: true,
+			nav: true,
+			prevText: "<span class='icon-arrow-left'></span>",
+			nextText: "<span class='icon-arrow-right'></span>"
+		});
+	})
+</script>
+</body>
+</html>
